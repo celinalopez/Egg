@@ -19,10 +19,8 @@ que el usuario no saque más del 20%.
  */
 public class Cuenta {
     private Scanner leer = new Scanner(System.in).useDelimiter("\n");
-    private int numeroCuenta;
-    private int dni;
-    private double saldoActual;
-    private double interes;
+    private int numeroCuenta, dni;
+    private double saldoActual, interes;
 
     public Cuenta() {
     }

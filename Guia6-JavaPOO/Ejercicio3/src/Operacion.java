@@ -21,8 +21,7 @@ al main.
  */
 public class Operacion {
     private Scanner leer = new Scanner(System.in).useDelimiter("\n");
-    private double numero1;
-    private double numero2;
+    private double numero1, numero2;
 
     //Constructor vacio
     public Operacion() {
