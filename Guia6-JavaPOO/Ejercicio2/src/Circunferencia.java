@@ -17,7 +17,7 @@ public class Circunferencia {
     public Circunferencia(double radio){
         this.radio = radio;
     }
-
+    //Constructor vacio
     public Circunferencia(){
         radio=0;
     }
