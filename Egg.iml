@@ -8,6 +8,9 @@
       <sourceFolder url="file://$MODULE_DIR$/Guia6-JavaPOO/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Guia6-JavaPOO/src/Ejercicios" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Java/introjava/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Guia6-JavaPOO/Ejercicio1/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Guia6-JavaPOO/Ejercicio2/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Guia6-JavaPOO/MascotAPP/src" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
