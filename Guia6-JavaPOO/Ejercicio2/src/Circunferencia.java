@@ -19,7 +19,6 @@ public class Circunferencia {
     }
     //Constructor vacio
     public Circunferencia(){
-        radio=0;
     }
 
     public void setRadio(double radio) {
@@ -35,20 +34,28 @@ public class Circunferencia {
         radio = leer.nextDouble();
     }
 
-    public double area(double radio){
+    public double area(){
         return (Math.PI * radio);
     }
 
-    public double perimetro(double radio){
+    public double perimetro(){
         return (2 * Math.PI * radio);
+    }
+
+    @Override
+    public String toString() {
+        return "Circunferencia: \n*radio: " + radio +
+                "\n*perimetro: " + perimetro() +
+                "\n*area: " + area();
     }
 
     public static void main(String[] args) {
 
-        Circunferencia circunferencia = new Circunferencia();
-        circunferencia.crearCircunferencia();
-        System.out.println("Area: "+ circunferencia.area(circunferencia.radio));
-        System.out.println("Perimetro: "+ circunferencia.perimetro(circunferencia.radio));
+        Circunferencia circunferencia1 = new Circunferencia();
+        circunferencia1.crearCircunferencia();
+        System.out.println(circunferencia1);
 
+        Circunferencia circunferencia2 = new Circunferencia(5);
+        System.out.println(circunferencia2);
     }
 }
