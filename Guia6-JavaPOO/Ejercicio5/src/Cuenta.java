@@ -33,7 +33,6 @@ public class Cuenta {
 
     }
 
-
     public void setNumeroCuenta(int numeroCuenta) {
         this.numeroCuenta = numeroCuenta;
     }
@@ -49,7 +48,6 @@ public class Cuenta {
     public void setInteres(double interes) {
         this.interes = interes;
     }
-
 
     public int getNumeroCuenta() {
         return numeroCuenta;
@@ -71,25 +69,30 @@ public class Cuenta {
         System.out.println("Ingrese el numero de cuenta: ");
         numeroCuenta = leer.nextInt();
         System.out.println("Ingrese su DNI: ");
-        dni = leer.nextInt();
+        setDni(leer.nextInt());
 
     }
     public void ingresar(){
-        System.out.println("Cantidad que desea ingresar: ");
+        System.out.println("*INGRESO \nCantidad que desea ingresar: ");
         saldoActual += leer.nextDouble();
+        setSaldoActual(saldoActual);
     }
     public void retirar(){
-        System.out.println("Cantidad que desea retirar: ");
+        System.out.println("*RETIRO \nCantidad que desea retirar: ");
         double n = leer.nextDouble();
         if (saldoActual < n){
             saldoActual=0;
-        } else saldoActual -= n;
+        } else{
+            saldoActual -= n;
+            setSaldoActual(saldoActual);
+        }
     }
     public void extraccionRapida(){
-        System.out.println("Cantidad maxima que puede retirar: "+(saldoActual*0.2));
+        System.out.println("*EXTRACCION RAPIDA \nCantidad maxima que puede retirar: "+(saldoActual*0.2));
         double n = leer.nextDouble();
         if ((saldoActual*0.2) >= n){
             saldoActual -= n;
+            setSaldoActual(saldoActual);
         }else{
             System.out.println("Error. Quiere retirar más del 20% del saldo actual");
         }
@@ -114,6 +117,8 @@ public class Cuenta {
         cuenta.consultarSaldo();
         cuenta.extraccionRapida();
         cuenta.consultarDatos();
+
+
 
     }
 }

@@ -69,10 +69,11 @@ public class Libro {
     //Main
     public static void main(String[] args) {
         Libro libro1 = new Libro(1234, "Harry Potter", "J.K Rowlin", 680);
+
         Libro libro2 = new Libro();
+        libro2.crearLibro(); //Nos va a pedir llenar los datos del libro
 
-        libro2.crearLibro();
-
+        //Imprimime usando cada getter
         System.out.println("\n*ISBN: " + libro1.getIsbn() +
                 "\n*Titulo: " + libro1.getTitulo() +
                 "\n*Autor: " + libro1.getAutor() +

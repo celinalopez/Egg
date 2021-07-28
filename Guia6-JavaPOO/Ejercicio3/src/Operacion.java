@@ -82,7 +82,7 @@ public class Operacion {
         operacion.crearOperacion();
         System.out.println("Suma: "+ operacion.sumar());
         System.out.println("Resta: "+ operacion.restar());
-        System.out.println("Multiplicacion: "+operacion.multiplicar());
+        System.out.println("Multiplicacion: "+ operacion.multiplicar());
         System.out.println("Divison: "+operacion.dividir());
     }
 }

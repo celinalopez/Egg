@@ -31,7 +31,7 @@ public class Circunferencia {
 
     public void crearCircunferencia(){
         System.out.println("Ingrese el radio de la circunferencia");
-        radio = leer.nextDouble();
+        setRadio(leer.nextInt());
     }
 
     public double area(){
@@ -53,9 +53,13 @@ public class Circunferencia {
 
         Circunferencia circunferencia1 = new Circunferencia();
         circunferencia1.crearCircunferencia();
-        System.out.println(circunferencia1);
+        //Imprimir usando el getter
+        System.out.println("Circunferencia: \n*radio: " + circunferencia1.getRadio() +
+                "\n*perimetro: " + circunferencia1.perimetro() +
+                "\n*area: " + circunferencia1.area());
 
         Circunferencia circunferencia2 = new Circunferencia(5);
+        //Imprimir usando la funcion automatica "ToString" de la clase Circunferencia
         System.out.println(circunferencia2);
     }
 }
