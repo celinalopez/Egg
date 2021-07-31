@@ -15,6 +15,9 @@
       <sourceFolder url="file://$MODULE_DIR$/Guia6-JavaPOO/Ejercicio5/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Guia6-JavaPOO/MascotAPP/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Guia6-JavaPOO/Ejercicio6/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Guia6-JavaPOO/EjemplosEgg/ClasesUtilidad/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Guia6-JavaPOO/EjemplosEgg/MascotAPP/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Guia6-JavaPOO/Ejercicio7/src" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
