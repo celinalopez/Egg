@@ -1,5 +1,10 @@
 package main;
 
+import objetos.Cadena;
+import service.Service;
+
+import java.util.Scanner;
+
 /**
  * Realizar una clase llamada Cadena que tenga como atributos una frase (de tipo de
  * String) y su longitud. En el main se creará el objeto y se le pedirá al usuario que ingrese
@@ -27,6 +32,17 @@ package main;
  */
 public class Main {
     public static void main(String[] args) {
+        Scanner leer = new Scanner(System.in).useDelimiter("\n");
+        Cadena c1 = new Cadena();
+        Service sv = new Service();
+        System.out.println("Ingrese una frase de una o mas palabras");
+        //Al settear la frase se guarda automaticamente su longitud en el setter de Cadena
+        c1.setFrase(leer.next());
+        System.out.println(c1.getLongitud());
+        // contar vocales
+        sv.mostrarVocales(c1);
+
+
 
     }
 }
