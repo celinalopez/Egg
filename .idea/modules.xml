@@ -2,7 +2,17 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Egg.iml" filepath="$PROJECT_DIR$/Egg.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Guia6-JavaPOO/EjemplosEgg/ClasesUtilidad/ClasesUtilidad.iml" filepath="$PROJECT_DIR$/Guia6-JavaPOO/EjemplosEgg/ClasesUtilidad/ClasesUtilidad.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Egg-2021.iml" filepath="$PROJECT_DIR$/.idea/Egg-2021.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Guia6-JavaPOO/Ejercicio1/Ejercicio1.iml" filepath="$PROJECT_DIR$/Guia6-JavaPOO/Ejercicio1/Ejercicio1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Guia6-JavaPOO/Ejercicio2/Ejercicio2.iml" filepath="$PROJECT_DIR$/Guia6-JavaPOO/Ejercicio2/Ejercicio2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Guia6-JavaPOO/Ejercicio3/Ejercicio3.iml" filepath="$PROJECT_DIR$/Guia6-JavaPOO/Ejercicio3/Ejercicio3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Guia6-JavaPOO/Ejercicio4/Ejercicio4.iml" filepath="$PROJECT_DIR$/Guia6-JavaPOO/Ejercicio4/Ejercicio4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Guia6-JavaPOO/Ejercicio5/Ejercicio5.iml" filepath="$PROJECT_DIR$/Guia6-JavaPOO/Ejercicio5/Ejercicio5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Guia6-JavaPOO/Ejercicio6/Ejercicio6.iml" filepath="$PROJECT_DIR$/Guia6-JavaPOO/Ejercicio6/Ejercicio6.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Guia6-JavaPOO/Ejercicio7/Ejercicio7.iml" filepath="$PROJECT_DIR$/Guia6-JavaPOO/Ejercicio7/Ejercicio7.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Guia5-JavaIntro/Guia5-JavaIntro.iml" filepath="$PROJECT_DIR$/Guia5-JavaIntro/Guia5-JavaIntro.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Guia6-JavaPOO/EjemplosEgg/MascotAPP/MascotAPP.iml" filepath="$PROJECT_DIR$/Guia6-JavaPOO/EjemplosEgg/MascotAPP/MascotAPP.iml" />
     </modules>
   </component>
 </project>

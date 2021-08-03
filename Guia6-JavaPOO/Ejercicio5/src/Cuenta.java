@@ -119,6 +119,5 @@ public class Cuenta {
         cuenta.consultarDatos();
 
 
-
     }
 }

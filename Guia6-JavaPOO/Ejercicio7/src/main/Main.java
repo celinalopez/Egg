@@ -1,4 +1,4 @@
-package app;
+package main;
 
 import persona.Persona;
 import service.Service;
