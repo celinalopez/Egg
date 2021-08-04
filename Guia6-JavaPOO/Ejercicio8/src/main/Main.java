@@ -40,9 +40,24 @@ public class Main {
         c1.setFrase(leer.next());
         System.out.println(c1.getLongitud());
         // contar vocales
-        sv.mostrarVocales(c1);
-
-
+        System.out.println(sv.mostrarVocales(c1));
+        //invertir frase
+        System.out.println(sv.invertirFrase(c1));
+        //caracter repetido
+        System.out.println("Ingrese un caracter");
+        sv.vecesRepetido(leer.next(),c1);
+        //comparar longitudes de dos frases
+        System.out.println("Ingrese una frase para comparar longitudes");
+        sv.compararLongitud(leer.next(), c1);
+        //Unir dos frases
+        System.out.println("Ingrese una nueva frase para concatenar");
+        System.out.println(sv.unirFrases(leer.next(),c1));
+        //Reemplazar las "a" por nuevo caracter
+        System.out.println("Ingrese un nuevo caracter para reemplazar a las 'a'");
+        System.out.println(sv.reemplazar(leer.next(),c1));
+        //Contiene letra VoF
+        System.out.println("Ingrese una letra para verificar si la frase la contiene");
+        System.out.println(sv.contiene(leer.next(), c1));
 
     }
 }
