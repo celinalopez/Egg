@@ -1,7 +1,7 @@
 package Ejercicio8.main;
 
 import Ejercicio8.cadena.Cadena;
-import service.Service;
+import Ejercicio8.service.Service;
 
 import java.util.Scanner;
 

@@ -1,6 +1,6 @@
 package EjemplosEgg.mascotapp.app;
-import entidades.Mascota;
-import servicios.ServicioMascota;
+import EjemplosEgg.mascotapp.entidades.Mascota;
+import EjemplosEgg.mascotapp.servicios.ServicioMascota;
 
 public class MascotAPP {
     public static void main(String[] args) {

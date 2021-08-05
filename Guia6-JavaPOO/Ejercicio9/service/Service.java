@@ -20,6 +20,6 @@ public class Service {
     public double calcularRaiz(Matematica m1){
         double n1 = m1.getNumero1();
         double n2 = m1.getNumero2();
-        return Math.abs(Math.sqrt(Math.min(n1,n2)));
+        return Math.round(Math.abs(Math.sqrt(Math.min(n1,n2))));
     }
 }

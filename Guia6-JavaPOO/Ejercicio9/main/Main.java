@@ -19,9 +19,10 @@ public class Main {
     public static void main(String[] args) {
         Matematica mate = new Matematica(Math.random()*101,Math.random()*101);
         Service sv = new Service();
-        System.out.println(sv.devolverMayor(mate));
-        System.out.println(sv.calcularPotencia(mate));
-        System.out.println(sv.calcularRaiz(mate));
+        System.out.println("numero 1: " + mate.getNumero1() + "\nnumero 2: "+ mate.getNumero2());
+        System.out.println("*numero mayor: " + sv.devolverMayor(mate));
+        System.out.println("*mayor potenciado al menor: " + sv.calcularPotencia(mate));
+        System.out.println("*raiz del menor: " + sv.calcularRaiz(mate));
 
     }
 }

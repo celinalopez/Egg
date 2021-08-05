@@ -1,6 +1,5 @@
 package EjemplosEgg.mascotapp.servicios;
-
-import entidades.Mascota;
+import EjemplosEgg.mascotapp.entidades.Mascota;
 
 import java.util.Scanner;
 
