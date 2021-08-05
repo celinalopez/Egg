@@ -11,8 +11,6 @@ import java.util.Arrays;
  * elementos y el combinado de 20.
  */
 public class Arreglo {
-
-
     private double[] arregloA = new double[50];
     private double[] arregloB = new double[20];
 
@@ -47,6 +45,17 @@ public class Arreglo {
 
     public static void main(String[] args) {
         Arreglo a1 = new Arreglo();
-        System.out.println(Arrays.toString(a1.arregloA));
+        System.out.println("Arreglo A: " +"\n"+ Arrays.toString(a1.arregloA));
+        //Ordenar arreglo
+        Arrays.sort(a1.arregloA);
+        System.out.println("*ARREGLO A ORDENADO: \n" + Arrays.toString(a1.arregloA));
+        //Llenar arreglo B
+        for (int i=0; i<10; i++){
+            a1.arregloB[i]=a1.arregloA[i];
+            for(int j=10; j<a1.arregloB.length; j++){
+                a1.arregloB[j]=0.5;
+            }
+        }
+        System.out.println("*ARREGLO COMBINADO: \n" + Arrays.toString(a1.arregloB));
     }
 }
