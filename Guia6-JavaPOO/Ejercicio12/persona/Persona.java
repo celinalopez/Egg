@@ -1,4 +1,4 @@
-package Ejercicio12.Persona;
+package Ejercicio12.persona;
 import java.util.Date;
 
 public class Persona {
@@ -6,6 +6,7 @@ public class Persona {
     private Date fechaNac;
 
     public Persona() {
+        fechaNac = new Date(); //Para que no se cree la fecha en null
     }
 
     public Persona(String nombre, Date fechaNac) {
@@ -27,5 +28,13 @@ public class Persona {
 
     public void setFechaNac(Date fechaNac) {
         this.fechaNac = fechaNac;
+    }
+
+    @Override
+    public String toString() {
+        return "Persona{" +
+               "nombre='" + nombre + '\'' +
+               ", fechaNac=" + fechaNac +
+               '}';
     }
 }
