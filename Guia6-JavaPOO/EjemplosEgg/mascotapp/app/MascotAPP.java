@@ -6,7 +6,7 @@ public class MascotAPP {
     public static void main(String[] args) {
 
         // mostrar parametros crtl + p
-        Mascota mascota1 = new Mascota("Fernando Chiquito", "Chiqui", "Perro","Tricolor",14,true,"Beagle");
+        Mascota mascota1 = new Mascota("Fernando Chiquito", "Chiqui", "Perro","Tricolor",14,"Beagle");
         //Si queremos cambiarle el nombre
         mascota1.setNombre("Pepe Chiquito");
 

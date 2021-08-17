@@ -1,4 +1,6 @@
-package EjemplosEgg.mascotapp.entidades;
+package EjemplosEggColecciones.mascotapp.mascota2;
+
+import java.util.Objects;
 
 public class Mascota {
     private String nombre;
@@ -102,6 +104,21 @@ public class Mascota {
         return energia;
     }
 
+    // alt insert equals() and hashcode
+    //queremos que devuelva false, que no sean iguales
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Mascota)) return false;
+        Mascota mascota = (Mascota) o;
+        return energia == mascota.energia && Objects.equals(getNombre(), mascota.getNombre()) && Objects.equals(getApodo(), mascota.getApodo()) && Objects.equals(getTipo(), mascota.getTipo()) && Objects.equals(getColor(), mascota.getColor()) && Objects.equals(getEdad(), mascota.getEdad()) && Objects.equals(getRaza(), mascota.getRaza());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getNombre(), getApodo(), getTipo(), getColor(), getEdad(), getRaza(), energia);
+    }
+
     // alt + insert "to string" hace una funcion que devuelve un mensaje
     @Override
     public String toString() {
@@ -116,3 +133,4 @@ public class Mascota {
                 '}';
     }
 }
+

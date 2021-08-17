@@ -22,7 +22,7 @@ public class ServicioMascota {
         System.out.println("Introducir raza");
         String raza = leer.next();
         // mostrar parametros crtl + p
-        return new Mascota(nombre,apodo,tipo,color,edad,cola,raza);
+        return new Mascota(nombre,apodo,tipo,color,edad,raza);
 
     }
 }
