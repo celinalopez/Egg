@@ -9,7 +9,7 @@ import java.util.Collections;
 public class ejemplo_comparator {
     public static void main(String[] args) {
         //Asi se define una matriz
-        ArrayList<ArrayList<String>> matriz = new ArrayList<>();
+        ArrayList<ArrayList<String>>matriz = new ArrayList<>();
 
         ArrayList<Mascota> mascotas = new ArrayList<>();
 
