@@ -1,6 +1,6 @@
 package EjemplosEggColecciones.ejemplos;
 
-import EjemplosEgg.mascotapp.entidades.Mascota;
+import EjemplosEgg.mascotapp2.entidadess.Mascota;
 import EjemplosEggColecciones.mascotapp.comparadores.Comparadores;
 
 import java.util.ArrayList;

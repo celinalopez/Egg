@@ -1,4 +1,4 @@
-package EjemplosEggColecciones.mascotapp.comparadores;
+package EjemplosEgg.mascotapp2.comparadores;
 import EjemplosEgg.mascotapp2.entidadess.Mascota;
 
 import java.util.Comparator;

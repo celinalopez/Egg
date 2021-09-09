@@ -1,12 +1,12 @@
 package EjemplosEgg.mascotapp.app;
-import EjemplosEgg.mascotapp.entidades.Mascota;
+import EjemplosEgg.mascotapp2.entidadess.Mascota;
 import EjemplosEgg.mascotapp.servicios.ServicioMascota;
 
 public class MascotAPP {
     public static void main(String[] args) {
 
         // mostrar parametros crtl + p
-        Mascota mascota1 = new Mascota("Fernando Chiquito", "Chiqui", "Perro","Tricolor",14,"Beagle");
+        Mascota mascota1 = new Mascota("Fernando Chiquito", "Chiqui", "Perro");
         //Si queremos cambiarle el nombre
         mascota1.setNombre("Pepe Chiquito");
 
