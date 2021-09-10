@@ -1,4 +1,10 @@
 package Ejercicio3.main;
+
+import Ejercicio3.carta.Carta;
+import Ejercicio3.service.Service;
+
+import java.util.ArrayList;
+
 /*
 Realizar una baraja de cartas españolas orientada a objetos. Una carta tiene un número
 entre 1 y 12 (el 8 y el 9 no los incluimos) y un palo (espadas, bastos, oros y copas). Esta
@@ -19,6 +25,27 @@ carta y luego se llama al método, este no mostrara esa primera carta.
  */
 public class Main {
     public static void main(String[] args) {
+        Service sv = new Service();
+        ArrayList<Carta> mazo1 = sv.crearMazo();
+
+        sv.mostrarBaraja(mazo1);
+        sv.cartasDisponibles(mazo1);
+
+        sv.barajar(mazo1);
+        sv.mostrarBaraja(mazo1);
+
+        //Mazo vacio prueba
+        ArrayList<Carta> mazo2 = new ArrayList<>();
+        sv.siguienteCarta(mazo2);
+
+        sv.siguienteCarta(mazo1);
+        sv.cartasDisponibles(mazo1);
+
+        sv.darCartas(mazo1);
+        sv.cartasDisponibles(mazo1);
+
+        sv.cartasMonton();
+        sv.mostrarBaraja(mazo1);
 
     }
 }
