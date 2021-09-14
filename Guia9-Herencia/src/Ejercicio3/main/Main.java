@@ -1,12 +1,12 @@
 package Ejercicio3.main;
 
-import Ejercicio2.electrodomesticos.Electrodomestico;
-import Ejercicio2.electrodomesticos.Lavadora;
-import Ejercicio2.electrodomesticos.Televisor;
-import Ejercicio2.service.Service;
-import Ejercicio2.service.ServiceLavadora;
+import Ejercicio3.electrodomesticos.Electrodomestico;
+import Ejercicio3.electrodomesticos.Lavadora;
+import Ejercicio3.electrodomesticos.Televisor;
+
 
 import java.util.ArrayList;
+
 
 /**
  * Siguiendo el ejercicio anterior, en el main vamos a crear un ArrayList de
@@ -24,27 +24,34 @@ public class Main {
     public static void main(String[] args) {
         ArrayList<Electrodomestico> lista_electrodomesticos = new ArrayList<>();
 
-        Lavadora l1 = new Lavadora("rojo",'D',40d,20d);
-        Lavadora l2 = new Lavadora("azul",'G',110d,30.5);
-        Televisor t1 = new Televisor("blanco",'E',40d,60d,false);
-        Televisor t2 = new Televisor("negro",'F',45d,100d,true);
-
-        lista_electrodomesticos.add(l1);
-        lista_electrodomesticos.add(l2);
-        lista_electrodomesticos.add(t1);
-        lista_electrodomesticos.add(t2);
-
-
-/*        lista_electrodomesticos.add(new Lavadora("rojo",'D',40d,20d));
+        lista_electrodomesticos.add(new Lavadora("rojo",'D',40d,20d));
         lista_electrodomesticos.add(new Lavadora("azul",'G',110d,30.5));
         lista_electrodomesticos.add(new Televisor("blanco",'E',40d,60d,false));
-        lista_electrodomesticos.add(new Televisor("negro",'F',45d,100d,true));*/
+        lista_electrodomesticos.add(new Televisor("negro",'F',45d,100d,true));
 
-        System.out.println("*Lista inicial electrodomesticos: ");
+        System.out.println("*Lista electrodomesticos: ");
         lista_electrodomesticos.forEach(electrodomestico -> System.out.println(electrodomestico.toString()));
 
-        System.out.println("*Electrodomesticos con precio final: ");
+        System.out.println("*Electrodomestico con su precio");
+        for (Electrodomestico e : lista_electrodomesticos){
+            System.out.println(e.getClass().getSimpleName() + ": " + e.getPrecio());
+        }
 
+        Double suma_lavadoras = 0d;
+        Double suma_televisores = 0d;
+
+        for (Electrodomestico e : lista_electrodomesticos){
+            if (e.getClass().equals(Lavadora.class)){
+                suma_lavadoras += e.getPrecio();
+            }
+            if (e.getClass().equals(Televisor.class)){
+                suma_televisores += e.getPrecio();
+            }
+        }
+        double suma_total = suma_lavadoras+ suma_televisores;
+        System.out.println("Suma precios lavadoras: " + suma_lavadoras);
+        System.out.println("Suma precios televisores: " + suma_televisores);
+        System.out.println("Suma precios total: " + suma_total);
 
 
     }
