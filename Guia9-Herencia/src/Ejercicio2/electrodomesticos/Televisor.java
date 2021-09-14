@@ -10,8 +10,8 @@ public class Televisor extends Service {
     public Televisor() {
     }
 
-    public Televisor(Double precio, String color, Character consumo, Double peso, Double resolucion, boolean tdt) {
-        super(precio, color, consumo, peso);
+    public Televisor(String color, Character consumo, Double peso, Double resolucion, boolean tdt) {
+        super(color, consumo, peso);
         this.resolucion = resolucion;
         this.tdt = tdt;
     }

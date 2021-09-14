@@ -11,6 +11,7 @@ public class ServiceLavadora extends Lavadora {
         super.crearElectrodomestico();
         System.out.println("Carga de la lavadora?: ");
         setCarga(leer.nextDouble());
+        precioFinal();
     }
 
     @Override

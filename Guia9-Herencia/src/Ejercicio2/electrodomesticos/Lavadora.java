@@ -1,5 +1,4 @@
 package Ejercicio2.electrodomesticos;
-
 import Ejercicio2.service.Service;
 
 public class Lavadora extends Service {
@@ -8,9 +7,10 @@ public class Lavadora extends Service {
     public Lavadora() {
     }
 
-    public Lavadora(Double precio, String color, Character consumo, Double peso, double carga) {
-        super(precio, color, consumo, peso);
+    public Lavadora(String color, Character consumo, Double peso, double carga) {
+        super(color, consumo, peso);
         this.carga = carga;
+        precioFinal();
     }
 
     public double getCarga() {

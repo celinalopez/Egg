@@ -11,28 +11,28 @@ public class Service extends Electrodomestico implements InterfazElectro{
     public Service() {
     }
 
-    public Service(Double precio, String color, Character consumo, Double peso) {
-        super(precio, color, consumo, peso);
+    public Service(String color, Character consumo, Double peso) {
+        super(color, consumo, peso);
         comprobarConsumoElectrico(consumo);
         comprobarColor(color);
     }
 
     public void crearElectrodomestico() {
         System.out.println("Color del electrodomestico?: ");
-        setColor(leer.next());
+        comprobarColor(leer.next());
         System.out.println("Peso del electrodomestico?: ");
         setPeso(leer.nextDouble());
         System.out.println("Consumo del electrodomestico?: ");
-        setConsumo(leer.next().charAt(0));
+        comprobarConsumoElectrico(leer.next().charAt(0));
         System.out.println("El precio base es de $1000");
-        setPrecio(1000d);
+        /*setPrecio(1000d);*/
     }
 
     @Override
     public void comprobarConsumoElectrico(char letra) {
-
-        if (letra == 'A' || letra == 'B' || letra == 'C' || letra == 'D'){
-            this.consumo = letra;
+        String l = String.valueOf(letra).toUpperCase();
+        if (l.equals("A") || l.equals("B") || l.equals("C") || l.equals("D")){
+            this.consumo = l.charAt(0);
         }else{
             this.consumo = 'F';
         }
@@ -67,13 +67,13 @@ public class Service extends Electrodomestico implements InterfazElectro{
         } else if (peso >= 80) {
             precioFinal += 1000;
         }
-        switch (consumo){
-            case 'A': precioFinal += 1000; break;
-            case 'B': precioFinal += 800; break;
-            case 'C': precioFinal += 600; break;
-            case 'D': precioFinal += 500; break;
-            case 'E': precioFinal += 300; break;
-            case 'F': precioFinal += 100; break;
+        switch (consumo.toString().toUpperCase()){
+            case "A": precioFinal += 1000; break;
+            case "B": precioFinal += 800; break;
+            case "C": precioFinal += 600; break;
+            case "D": precioFinal += 500; break;
+            case "E": precioFinal += 300; break;
+            case "F": precioFinal += 100; break;
         }
         setPrecio(precioFinal);
     }

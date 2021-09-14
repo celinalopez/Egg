@@ -13,6 +13,7 @@ public class ServiceTelevisor extends Televisor {
         setResolucion(leer.nextDouble());
         System.out.println("Posee TDT? true/false");
         setTdt(leer.hasNext());
+        precioFinal();
     }
 
     @Override

@@ -1,20 +1,17 @@
 package Ejercicio2.electrodomesticos;
 
-
-import java.util.Scanner;
-
 public class Electrodomestico {
-    Scanner leer = new Scanner(System.in).useDelimiter("\n");
     protected Double precio;
     protected String color;
     protected Character consumo;
     protected Double peso;
 
     public Electrodomestico() {
+        this.precio = 1000d;
     }
 
-    public Electrodomestico(Double precio, String color, Character consumo, Double peso) {
-        this.precio = precio;
+    public Electrodomestico(String color, Character consumo, Double peso) {
+        this.precio = 1000d;
         this.peso = peso;
         this.consumo = consumo;
         this.color = color;
