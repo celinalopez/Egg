@@ -1,3 +1,4 @@
 # Project exclude paths
 /out/
 /Guia12/nbproject/private/
+/Guia12-JDBC/build/
