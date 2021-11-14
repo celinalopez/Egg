@@ -1,241 +1,103 @@
 package servicios;
 
 import entidades.Producto;
+import persistencia.FabricanteDAO;
 import persistencia.ProductoDAO;
+import java.util.Scanner;
 
-import java.util.Collection;
 
 public class ProductoService {
+    ProductoDAO prod = new ProductoDAO();
+    FabricanteDAO fab = new FabricanteDAO();
+    Scanner scan = new Scanner(System.in);
 
-    private final ProductoDAO dao;
-
-    public ProductoService() {
-        this.dao = new ProductoDAO();
-    }
-
-    // A
-    public void listarNombre() throws Exception {
-
+    public void seleccionarTodo() {
         try {
-
-            //Listamos los productos
-            Collection<Producto> productos = listarProductos();
-
-            //Imprimimos los productos
-            if (productos.isEmpty()) {
-                throw new Exception("No existen productos para imprimir");
-            } else {
-                for (Producto u : productos) {
-                    System.out.println(u.getNombre());
-                }
-            }
+            prod.seleccionarTodosProductos();
         } catch (Exception e) {
-            throw e;
-        }
-
-    }
-
-    //B
-    public void listarNombrePrecio() throws Exception {
-
-        try {
-
-            //Listamos los productos
-            Collection<Producto> productos = listarProductos();
-
-            //Imprimimos los productos
-            if (productos.isEmpty()) {
-                throw new Exception("No existen productos para imprimir");
-            } else {
-                for (Producto u : productos) {
-                    System.out.println("nombre: " + u.getNombre() + " precio: " + u.getPrecio());
-                }
-            }
-        } catch (Exception e) {
-            throw e;
+            // TODO: handle exception
+            System.out.println(e.getMessage());
         }
     }
 
-    //C
-    public void listarPrecio() throws Exception {
-
+    public void seleccionarNombrePrecio() {
         try {
-
-            //Listamos los productos
-            Collection<Producto> productos = listarProductos();
-
-            //Imprimimos los productos
-            if (productos.isEmpty()) {
-                throw new Exception("No existen productos para imprimir");
-            } else {
-                for (Producto u : productos) {
-                    if (u.getPrecio() >= 120 && u.getPrecio() <= 202)
-                        System.out.println("nombre: " + u.getNombre() + " precio: " + u.getPrecio());
-                }
-            }
+            prod.seleccionarNombrePrecioProductos();
         } catch (Exception e) {
-            throw e;
-        }
-
-    }
-
-    //D
-    public void listarPortatiles() throws Exception {
-        try {
-            //Listamos los productos
-            Collection<Producto> productos = dao.buscarProductoPorTipo("Portátil");
-
-            //Imprimimos los productos
-            if (productos.isEmpty()) {
-                throw new Exception("No existen productos para imprimir");
-            } else {
-                for (Producto u : productos) {
-                    System.out.println(u.toString());
-                }
-            }
-        } catch (Exception e) {
-            throw e;
+            // TODO: handle exception
+            System.out.println(e.getMessage());
         }
     }
 
-    //E
-    public void mostrarMasBarato() throws Exception{
+    public void seleccionarRangoPrecio() {
         try {
-            //Listamos los productos
-            Producto producto = dao.buscarMasBarato();
-
-            //Imprimimos los productos
-            if (producto == null) {
-                throw new Exception("No existen productos para imprimir");
-            } else {
-                System.out.println("nombre: " + producto.getNombre() + " precio: " + producto.getPrecio());
-            }
+            prod.precioRango();
         } catch (Exception e) {
-            throw e;
+            // TODO: handle exception
+            System.out.println(e.getMessage());
         }
     }
 
-    //F
-    public void crearProducto(String nombre, Double precio, int cod_fabricante) throws Exception {
-
+    public void seleccionarPortatiles() {
         try {
-            //Validamos
-            if (nombre == null || nombre.trim().isEmpty()) {
-                throw new Exception("Debe indicar el nombre");
-            }
+            prod.seleccionarPortatiles();
+        } catch (Exception e) {
+            // TODO: handle exception
+            System.out.println(e.getMessage());
+        }
+    }
 
-            if (precio == null) {
-                throw new Exception("Debe indicar el precio");
-            }
+    public void seleccionarProductoBarato() {
+        try {
+            prod.seleccionarMasBarato();
+        } catch (Exception e) {
+            // TODO: handle exception
+            System.out.println(e.getMessage());
+        }
+    }
 
-            //Creamos el producto
+    public void insertarProducto() {
+        try {
+            String nombre;
+            double precio;
+            int codigo;
+            System.out.println("Ingrese el nombre del producto");
+            nombre = scan.nextLine();
+            System.out.println("Ingrese el precio del producto");
+            precio = scan.nextDouble();
+            System.out.println("Ingrese el codigo del fabricante");
+            fab.seleccionarFabricantes();
+            codigo = scan.nextInt();
             Producto producto = new Producto();
             producto.setNombre(nombre);
             producto.setPrecio(precio);
-            producto.setCodigoFabricante(cod_fabricante);
-
-            dao.insertarProducto(producto);
-
+            producto.setCodigoFabricante(codigo);
+            prod.insertarProducto(producto);
         } catch (Exception e) {
-            throw e;
+            // TODO: handle exception
+            System.out.println(e.getMessage());
         }
     }
 
-    //H
-    public void modificarCodigoProducto(int codigo, String nombre, Double precio, int cod_fabricante) throws Exception {
-
+    public void modificarProducto() {
         try {
-
-            //Validamos
-            if (codigo > 0) {
-                throw new Exception("Debe indicar el codigo");
-            }
-
-            if (nombre == null || nombre.trim().isEmpty()) {
-                throw new Exception("Debe indicar el nombre");
-            }
-
-            if (precio == null) {
-                throw new Exception("Debe indicar la precio");
-            }
-
-            if (cod_fabricante < 0) {
-                throw new Exception("Debe indicar el codigo de fabricante");
-            }
-
-            //Buscamos
-            Producto producto = buscarProductoPorCodigo(codigo);
-
-            dao.modificarProducto(producto);
+            System.out.println("Ingrese el nombre del producto a modificar");
+            String nombreProducto = scan.nextLine();
+            System.out.println("Ingrese el nombre del nuevo producto");
+            String nombre = scan.nextLine();
+            System.out.println("Ingrese el precio del nuevo producto");
+            double precio = scan.nextDouble();
+            System.out.println("Ingrese el codigo de fabricante del nuevo producto");
+            fab.seleccionarFabricantes();
+            int fabricante = scan.nextInt();
+            Producto producto = new Producto();
+            producto.setNombre(nombre);
+            producto.setPrecio(precio);
+            producto.setCodigoFabricante(fabricante);
+            prod.modificarProducto(producto, nombreProducto);
         } catch (Exception e) {
-            throw e;
+            // TODO: handle exception
+            System.out.println(e.getMessage());
         }
-    }
-
-    public void eliminarProducto(int codigo) throws Exception {
-
-        try {
-
-            //Validamos
-            if (codigo < 0) {
-                throw new Exception("Debe indicar el codigo");
-            }
-            dao.eliminarProducto(codigo);
-        } catch (Exception e) {
-            throw e;
-        }
-    }
-
-    public Producto buscarProductoPorCodigo(int codigo) throws Exception {
-
-        try {
-
-            //Validamos
-            if (codigo < 0) {
-                throw new Exception("Debe indicar el codigo");
-            }
-            Producto producto = dao.buscarProductoPorCod(codigo);
-            //Verificamos
-            if (producto == null) {
-                throw new Exception("No se encontró producto para el codigo indicado");
-            }
-
-            return producto;
-        } catch (Exception e) {
-            throw e;
-        }
-    }
-
-    public Collection<Producto> listarProductos() throws Exception {
-
-        try {
-
-            Collection<Producto> productos = dao.listarProductos();
-
-            return productos;
-        } catch (Exception e) {
-            throw e;
-        }
-    }
-
-    public void imprimirProductos() throws Exception {
-
-        try {
-
-            //Listamos los productos
-            Collection<Producto> productos = listarProductos();
-
-            //Imprimimos los productos
-            if (productos.isEmpty()) {
-                throw new Exception("No existen productos para imprimir");
-            } else {
-                for (Producto u : productos) {
-                    System.out.println(u.toString());
-                }
-            }
-        } catch (Exception e) {
-            throw e;
-        }
-
     }
 }

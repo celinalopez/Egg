@@ -28,4 +28,20 @@ public class Fabricante {
     public void setCodigo(int codigo) {
         this.codigo = codigo;
     }
+
+    public Fabricante codigo(int codigo) {
+        setCodigo(codigo);
+        return this;
+    }
+
+    public Fabricante nombre(String nombre) {
+        setNombre(nombre);
+        return this;
+    }
+
+    @Override
+    public String toString() {
+        return "{" + " codigo='" + getCodigo() + "'" + ", nombre='" + getNombre() + "'" + "}";
+    }
+
 }
